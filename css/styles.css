@@ -1,0 +1,13 @@
+#container {
+  width: 948px;
+}
+
+aside {
+  float: right;
+  width: 300px;
+}
+
+.main {
+  float: left;
+  width: 624px;
+}
