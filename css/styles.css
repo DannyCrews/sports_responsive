@@ -63,6 +63,35 @@ aside {
   width: 65.8227848%; /* 624/948 */
 }
 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{ 
+    display:block;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+a:hover {
+    text-decoration: underline
+}
+ol,
+ul {
+    list-style: none
+}
+blockquote,
+q {
+    quotes: none
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+:focus {
+    outline: none
+}
+
 /* Typography */
 h1 {
     font-family: 'ChunkFiveRegular', Georgia, serif;
