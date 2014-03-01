@@ -29,6 +29,18 @@ time, mark, audio, video {
   }
 }
 
+@media all and (min-width: 600px) {
+  .slats li {
+    float: left;
+    margin-right: 2.5316456%;
+    width: 31.6455696%;
+
+  }
+  .slats li:last-child {
+    margin-right: 0;
+  }
+}
+
 @font-face {
     font-family: 'ChunkFiveRegular';
     src: url('Chunkfive-webfont.eot');
