@@ -1,13 +1,30 @@
+html, body, div, span, p {
+  moz box sizing: border box;
+  webkit box sizing: border box;
+  box sizing: border box;
+}
+
+aside img, /* set up images to fill column they're in */
+.main img,
+.slats img {
+    width: 100%;
+}
+
+
 #container {
-  width: 948px;
+  width: 95%;
+  padding: .625em 1.0548523% 1.5em; /* 10px/16px, 10px/948px, 24px/16px */
+  margin: auto 0;
+
 }
 
 aside {
   float: right;
-  width: 300px;
+  width: 31.6455696%; /* 300/948 */
 }
 
 .main {
   float: left;
-  width: 624px;
+  margin-right: 2.5316456%; /* 24px/948px */
+  width: 65.8227848%; /* 624/948 */
 }
