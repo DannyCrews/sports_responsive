@@ -1,13 +1,14 @@
 html, body, div, span, p {
-  moz box sizing: border box;
-  webkit box sizing: border box;
-  box sizing: border box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 aside img, /* set up images to fill column they're in */
 .main img,
 .slats img {
     width: 100%;
+    max-width: 100%
 }
 
 
@@ -19,11 +20,14 @@ aside img, /* set up images to fill column they're in */
 }
 
 aside {
+  display: table-cell;
   float: right;
-  width: 31.6455696%; /* 300/948 */
+  width: 300px; /* 300/948 */
 }
 
 .main {
+  display: table-cell;
+  padding-right: 2.531645%;/* 24px/948px */
   float: left;
   margin-right: 2.5316456%; /* 24px/948px */
   width: 65.8227848%; /* 624/948 */
