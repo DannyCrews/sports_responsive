@@ -21,15 +21,15 @@ time, mark, audio, video {
 }
 @font-face {
     font-family: 'ChunkFiveRegular';
-    src: url('Chunkfive-webfont.eot');
-    src: url('Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Chunkfive-webfont.woff') format('woff'),
-         url('Chunkfive-webfont.ttf') format('truetype'),
-         url('Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+    src: url('../Chunkfive-webfont.eot');
+    src: url('../Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Chunkfive-webfont.woff') format('woff'),
+         url('../Chunkfive-webfont.ttf') format('truetype'),
+         url('../Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
-}               
+}           
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{ 
     display:block;
 }
@@ -135,11 +135,10 @@ header{
 }
 
 #container {
-    margin: auto auto 1.5em auto;
+    margin: auto 0;
     overflow: hidden;
-  width: 95%;
-  padding: 1.0548523%; /* 10px/948*/
-    
+    width: 95%;
+    padding: .625em 1.0548523% 1.5em; /* 10px/16px, 10px/948, 24px/16px */
 }
 
 
@@ -151,7 +150,6 @@ header{
   aside img{
     max-width: 100%;
   }
-  
 ul.tags li {
     float: left;
     font-size: 14px;
@@ -212,6 +210,17 @@ ul.tags li {
 /*
  * Nav
  ** --------------------------------------------------*/
+#nav-collapse{
+  display: none;
+  color: #fff;
+  text-align: right;
+  width: 100%;
+  padding: .625em 0 .625em 0;
+}
+#nav-collapse.active{
+  display: block;
+}
+ 
 nav[role="navigation"] {
     background-color: #9D0000;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#9D0000), to(#800505));
@@ -227,6 +236,9 @@ nav[role="navigation"] {
 }
 nav[role="navigation"] ul{
   margin-bottom: 0;
+}
+nav[role="navigation"] ul.hide{
+  display:none;
 }
     nav[role="navigation"] li.active a {
         color: #fff;
@@ -300,35 +312,78 @@ nav[role="navigation"] ul{
         footer nav[role="navigation"] a {
             color: #999
         }
-/*
-.main {
-  display: table-cell;
-  padding-right: 2.5316456%; /* 24px / 948px */
-/* }
-aside {
+/* 600px */
+@media all and (min-width: 37.5em) {
+  .slats li {
+      float: left;
+    margin-right: 2.5316456%; /* 24px / 948px */
+    width: 31.6455696%; /* 300/948 */
+  }
+  .slats li:last-child {
+      margin-right: 0;
+  }
+  
+}
+/* 860px */
+@media all and (min-width: 53.75em) {
+  aside{
+    display: block;
+    margin-bottom: 1em;
+    padding: 0 1%;
+    width: auto;
+  }
+  
+  aside section{
+        float: left;
+        margin-right: 2%;
+        width: 48%;
+  }
+
+  nav[role="navigation"] li {
+      float: left;
+    border-top: 0;
+  }
+  nav[role="navigation"] a {
+    float: left;
+  }
+  footer[role="contentinfo"] .top {
+    float: right;
+  }
+
+}
+/* 940px */
+@media all and (min-width: 58.75em) {
+  .main {
     display: table-cell;
-  width: 300px;
+    padding-right: 2.5316456%; /* 24px / 948px */
+  }
+  aside {
+      display: table-cell;
+    width: 300px;
+  }
+  aside section{
+    float: none;
+    width: 100%;
+  }
 }
-.slats li {
-    float: left;
-  margin-right: 2.5316456%; /* 24px / 948px */
-  /* width: 31.6455696%; /* 300/948 */
-  /* }
-.slats li:last-child {
-    margin-right: 0;
+/* 1300px */
+@media all and (min-width: 81.25em) {
+  .main section img{
+    margin-bottom: 1em;
+    border: 3px solid #dbdbdb;
+  }
+  .main .articleInfo{
+      border-bottom: 2px solid #dbdbdb;
+  }
+  .main section{
+    -moz-column-count: 2; /* Firefox */
+    -webkit-column-count: 2; /* Safari, Chrome */
+    column-count: 2;
+    -moz-column-gap: 1.5em; /* Firefox */
+    -webkit-column-gap: 1.5em; /* Safari, Chrome */
+    column-gap: 1.5em;
+    -moz-column-rule: 1px dotted #ccc; /* Firefox */
+    -webkit-column-rule: 1px dotted #ccc; /* Safari, Chrome */
+    column-rule: 1px dotted #ccc;
+  }
 }
-nav[role="navigation"] li {
-    float: left;
-}
-
-nav[role="navigation"] a {
-  float: left;
-}
-footer[role="contentinfo"] .top {
-  float: right;
-}
-footer[role="contentinfo"] nav {
-    float: left
-}
-
-*/
